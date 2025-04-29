@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Web Experience</h1>
+        <p class="subtitle">Hover over me for a surprise!</p>
+    </header>
+
+    <main>
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="interactive">Interactive Elements</button>
+                <button class="tab-btn" data-tab="gallery">Image Gallery</button>
+                <button class="tab-btn" data-tab="form">Form Validation</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Interactive Elements Tab -->
+                <div class="tab-pane active" id="interactive">
+                    <h2>Interactive Elements</h2>
+                    
+                    <div class="interactive-buttons">
+                        <button id="change-color">Change My Color</button>
+                        <button id="change-text">Change My Text</button>
+                        <button id="secret-button">Double-Click Me</button>
+                    </div>
+
+                    <div class="keypress-area" tabindex="0">
+                        <h3>Keypress Detection</h3>
+                        <p>Click here, then press any key to see it appear below:</p>
+                        <div id="key-display">Click area above, then press a key</div>
+                        <p class="hint">Try pressing the spacebar for a special effect!</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Tab -->
+                <div class="tab-pane" id="gallery">
+                    <h2>Image Gallery</h2>
+                    
+                    <div class="gallery-container">
+                        <button id="prev-btn" class="gallery-btn">❮</button>
+                        
+                        <div class="gallery-images">
+                            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=400&fit=crop" alt="Mountain Landscape" class="active-img">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=400&fit=crop" alt="Forest Landscape">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&h=400&fit=crop" alt="Ocean Sunset">
+                            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&h=400&fit=crop" alt="Desert Landscape">
+                        </div>
+                        
+                        <button id="next-btn" class="gallery-btn">❯</button>
+                    </div>
+                    
+                    <div class="gallery-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                    </div>
+                </div>
+
+                <!-- Form Validation Tab -->
+                <div class="tab-pane" id="form">
+                    <h2>Form Validation</h2>
+                    
+                    <form id="validation-form">
+                        <div class="form-group">
+                            <label for="name">Name (required)</label>
+                            <input type="text" id="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email (required)</label>
+                            <input type="email" id="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password (min 8 characters)</label>
+                            <input type="password" id="password" required>
+                            <span class="error-message" id="password-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" required>
+                            <span class="error-message" id="confirm-password-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" id="submit-btn">Submit</button>
+                            <div id="form-success" class="success-message hidden">Form submitted successfully!</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created by Keawin Koesnel| <span id="current-year"></span></p>
+    </footer>
+
+    <script src="js-file.js"></script>
+</body>
+</html>
